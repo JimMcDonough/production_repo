@@ -21,6 +21,15 @@ something larger than a t2.micro instance on AWS.  More memory is needed for ins
 all the libraries in the requirements.txt file.   
 https://towardsdatascience.com/simple-way-to-deploy-machine-learning-models-to-cloud-fd58b771fdcf
 
+You will upload to AWS app.py, Dockerfile, requirements.txt, and 
+full_saved_model directory using the terminal command:
+
+scp -i /path/my-key-pair.pem file-to-copy ec2-user@public-dns-name:/home/ec2-user
+
+use -r command to recursively copy the full_saved_model directory
+
+Follow the above article for more details.  
+
 #Using Application
 You must run the docker application using aws console or remote in from terminal.  
 From the above article use these commands:
