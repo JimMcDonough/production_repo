@@ -36,6 +36,9 @@ From the above article use these commands:
 
 command remote in on terminal: ssh -i /path/my-key-pair.pem ec2-user@public-dns-name
 
+start docker command: sudo service docker start
+user mode command: sudo usermod -a -G docker ec2-user
+
 command to run: docker run -p 80:80 <app_name> .
 
 Send an HTTP request to the aws_public_DNS provide on aws (looks like this 
